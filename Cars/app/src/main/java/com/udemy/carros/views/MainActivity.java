@@ -25,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Adjust icon
+        getSupportActionBar().setDisplayShowTitleEnabled(false); // don't show title in action bar
+        getSupportActionBar().setDisplayShowHomeEnabled(true); // show icon
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher); // icon to show
+
+
+
+
         this.mContext = this;
 
 

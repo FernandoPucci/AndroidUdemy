@@ -22,6 +22,11 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
+        // Adjust icon
+        getSupportActionBar().setDisplayShowTitleEnabled(false); // don't show title in action bar
+        getSupportActionBar().setDisplayShowHomeEnabled(true); // show icon
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher); // icon to show
+
         this.mCarMock = new CarMock();
 
         this.mDetailsViewHolder.textModel = (TextView) this.findViewById(R.id.text_model);
@@ -39,6 +44,7 @@ public class DetailsActivity extends AppCompatActivity {
         this.mDetailsViewHolder.textPrice.setText(String.valueOf(this.mCar.price));
     }
 
+    // Load Data coming from another activity, from Bundle amd set
     private void getDataFromActivity() {
 
         Bundle extras = getIntent().getExtras();
