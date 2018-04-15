@@ -34,7 +34,7 @@ public class CarMock {
 
         int id = 0;
 
-        Car auriR8 = new Car(id, "Audi R8", "Audi", 610, Double.valueOf(12000.00), ContextCompat.getDrawable(activity, R.drawable.audir8));
+        Car auriR8 = new Car(id, "Audi R8", "Audi", 610, Double.valueOf(120000.00), ContextCompat.getDrawable(activity, R.drawable.audir8));
         mMockList.add(auriR8);
 
         Car bugattiChiron = new Car(++id, "Bugatti Chiron", "Bugatti", 1520, Double.valueOf(1000000.00), ContextCompat.getDrawable(activity, R.drawable.bugattichiron));

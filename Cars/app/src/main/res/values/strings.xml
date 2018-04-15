@@ -4,4 +4,7 @@
     <string name="horsePower">Cavalos</string>
     <string name="price">Preço:</string>
     <string name="see_details">VER DETALHES</string>
+    <string name="manufacturer">manufacturer</string>
+    <string name="label_horse_power">Cavalos</string>
+    <string name="price_value">Valor</string>
 </resources>
