@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.udemy.carros.R;
 import com.udemy.carros.entities.Car;
+import com.udemy.carros.listeners.OnListClickInteractionListener;
 
 public class CarViewHolder extends RecyclerView.ViewHolder{
 
@@ -18,9 +19,18 @@ public class CarViewHolder extends RecyclerView.ViewHolder{
     }
 
 
-    public void bindData(Car car) {
+    public void bindData(final Car car, final OnListClickInteractionListener mOnListClickInteractionListener) {
 
         this.mTextModel.setText(car.model);
+        this.mTextModel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // change activity
+                mOnListClickInteractionListener.onClick(car.id);
+
+            }
+        });
 
     }
 }
