@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.udemy.carros.R;
+import com.udemy.carros.entities.Car;
 
 public class CarViewHolder extends RecyclerView.ViewHolder{
 
@@ -17,4 +18,9 @@ public class CarViewHolder extends RecyclerView.ViewHolder{
     }
 
 
+    public void bindData(Car car) {
+
+        this.mTextModel.setText(car.model);
+
+    }
 }

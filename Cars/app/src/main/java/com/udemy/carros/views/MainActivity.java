@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.udemy.carros.R;
 import com.udemy.carros.helpers.adapters.CarListAdapter;
+import com.udemy.carros.mock.CarMock;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,12 +19,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Load mock
+        CarMock carMock = new CarMock();
+
 
         // 1 - Get Recycler view
         this.mViewHolder.recyclerCars = (RecyclerView) this.findViewById(R.id.recycler_cars);
 
         // 2 - Define adapter between Recycler view and items list
-        CarListAdapter carListAdapter = new CarListAdapter();
+        CarListAdapter carListAdapter = new CarListAdapter(carMock.getListCars());
         this.mViewHolder.recyclerCars.setAdapter(carListAdapter);
 
         // 3 - Define Recycler View Layout
