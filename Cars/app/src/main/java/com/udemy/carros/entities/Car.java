@@ -1,5 +1,7 @@
 package com.udemy.carros.entities;
 
+import android.graphics.drawable.Drawable;
+
 public class Car {
 
     public int id;
@@ -7,14 +9,16 @@ public class Car {
     public int horsePower;
     public double price;
 
-    public Car(int id, String model, int horsePower, double price) {
+    public String manufacturer;
+    public Drawable picture;
+
+
+    public Car(int id, String model, String manufacturer, int horsePower, double price,  Drawable picture) {
         this.id = id;
         this.model = model;
         this.horsePower = horsePower;
         this.price = price;
+        this.manufacturer = manufacturer;
+        this.picture = picture;
     }
-
-
-
-
 }

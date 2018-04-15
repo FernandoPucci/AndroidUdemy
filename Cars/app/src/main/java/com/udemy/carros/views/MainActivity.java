@@ -30,14 +30,11 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true); // show icon
         getSupportActionBar().setIcon(R.mipmap.ic_launcher); // icon to show
 
-
-
-
         this.mContext = this;
 
 
         // Load mock
-        CarMock carMock = new CarMock();
+        CarMock carMock = new CarMock(this);
 
 
         // 1 - Get Recycler view

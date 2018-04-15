@@ -27,7 +27,7 @@ public class DetailsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true); // show icon
         getSupportActionBar().setIcon(R.mipmap.ic_launcher); // icon to show
 
-        this.mCarMock = new CarMock();
+        this.mCarMock = new CarMock(this);
 
         this.mDetailsViewHolder.textModel = (TextView) this.findViewById(R.id.text_model);
         this.mDetailsViewHolder.textHorsePower = (TextView) this.findViewById(R.id.text_horse_power);

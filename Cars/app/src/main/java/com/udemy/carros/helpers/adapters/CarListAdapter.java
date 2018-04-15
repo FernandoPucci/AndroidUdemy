@@ -1,7 +1,6 @@
 package com.udemy.carros.helpers.adapters;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,9 +24,8 @@ public class CarListAdapter extends RecyclerView.Adapter<CarViewHolder> {
         this.mOnListClickInteractionListener = listener;
     }
 
-    @NonNull
     @Override
-    public CarViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CarViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         // get context and inflate layout
         Context context = parent.getContext();
@@ -41,7 +39,7 @@ public class CarListAdapter extends RecyclerView.Adapter<CarViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CarViewHolder holder, int position) {
+    public void onBindViewHolder(CarViewHolder holder, int position) {
         Car car = this.mListCars.get(position);
         holder.bindData(car, this.mOnListClickInteractionListener);
     }
